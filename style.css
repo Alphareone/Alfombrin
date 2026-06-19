@@ -30,7 +30,14 @@ nav {
     background: linear-gradient(rgba(26, 93, 44, 0.7), rgba(26, 93, 44, 0.6)), url('https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=1350&q=80');
     background-size: cover; background-position: center; padding: 0 5%;
 }
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
 .highlight { color: var(--accent); }
 .discount-badge { background: var(--accent); color: var(--dark-green); padding: 10px 30px; border-radius: 50px; font-weight: 800; font-size: 1.2rem; display: inline-block; margin-bottom: 20px; animation: pulse 2s infinite; }
 
@@ -75,7 +82,7 @@ footer { background: var(--dark-green); color: white; text-align: center; paddin
 /* Botones */
 .btn-cta { background: var(--mid-green); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
 .btn-cta:hover { background: var(--accent); color: var(--dark-green); }
-.btn-secondary { background: transparent; border: 2px solid white; color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; margin-right: 15px; }
+.btn-secondary { background: transparent; border: 2px solid white; color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; margin-right: 15px; display: inline-block; }
 .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 1000; text-decoration: none; transition: 0.3s; }
 .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); }
 
@@ -83,71 +90,93 @@ footer { background: var(--dark-green); color: white; text-align: center; paddin
 .reveal { opacity: 0; transform: translateY(40px); transition: 1s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* ==========================================================
-   MEJORA RESPONSIVE: Evita colisiones en dispositivos móviles
-   ========================================================== */
+/* ==========================================================================
+   MÓVIL / RESPONSIVE OPTIMIZADO (EVITA COMPLETAMENTE SUPERPOSICIONES)
+   ========================================================================== */
 @media (max-width: 768px) {
-    /* Ocultar navegación en móvil como lo tenías */
     .nav-links, .nav-btn { 
-        display: none; 
+        display: none !important; 
     }
     
-    /* Rompe las rejillas de dos columnas pasándolas a una */
     .process-grid, .about-content { 
-        grid-template-columns: 1fr; 
-        gap: 30px; /* Acorta un poco la separación */
+        grid-template-columns: 1fr !important; 
+        gap: 30px !important; 
     }
 
-    /* 🔥 LA SOLUCIÓN AL HERO: Cambiamos height fijo por padding dinámico */
+    /* Modificamos el Hero para que respire con scroll fluido */
     .hero {
-        height: auto; /* Le quitamos el candado de los 100vh */
-        min-height: 100vh; /* Se asegura de cubrir la pantalla, pero si le falta espacio crece hacia abajo */
-        padding: 120px 20px 60px; /* 120px arriba empuja todo hacia abajo librando el navbar fijo */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 130px 24px 60px !important; /* Espacio superior para esquivar el Navbar fijo */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
-    /* Controlamos el tamaño de la insignia para que no se coma la pantalla */
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
     .discount-badge {
-        font-size: 0.95rem;
-        padding: 8px 20px;
-        margin-bottom: 15px;
+        font-size: 0.95rem !important;
+        padding: 8px 24px !important;
+        margin-bottom: 20px !important;
     }
 
-    /* Controlamos el tamaño de fuente para celulares angostos */
     .hero h1 { 
-        font-size: 2.2rem; /* Tamaño idóneo para móviles */
-        line-height: 1.2;
-        margin-bottom: 25px;
+        font-size: 2.2rem !important; /* Achicamos la tipografía para que no explote de lado a lado */
+        line-height: 1.25 !important;
+        margin-bottom: 15px !important;
     }
 
-    /* 🔥 BOTONES: En vertical para que quepan holgadamente */
+    .hero p {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+        line-height: 1.5 !important;
+        padding: 0 5px !important;
+    }
+
+    /* Flujo vertical controlado para los dos botones */
+    .hero-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+
     .btn-secondary, .btn-cta {
-        display: block; /* Hacemos que se comporten como bloques autónomos */
-        width: 100%; /* Ocupan el ancho disponible */
-        max-width: 290px; /* Evita que queden gigantes de lado a lado */
-        margin: 0 auto 12px !important; /* Los centra y separa verticalmente */
-        text-align: center;
-        padding: 15px 25px; /* Un tamaño más cómodo para pulsar con el pulgar */
-    }
-    
-    /* Quitamos el margen derecho del botón secundario para que no desalinee en vertical */
-    .btn-secondary {
-        margin-right: auto !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 290px !important;
+        margin: 0 !important; /* Elimina márgenes laterales antiguos */
+        text-align: center !important;
+        padding: 15px 25px !important;
+        box-sizing: border-box !important;
     }
 
-    /* Reducción sutil de espacios globales para móvil */
+    /* Espaciados generales reducidos en móvil */
     .features, .process-section, .about-section { 
-        padding: 60px 5%; 
+        padding: 60px 5% !important; 
     }
     .about-container {
-        padding: 30px 20px;
+        padding: 35px 20px !important;
     }
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
-}
-    .hero h1 { font-size: 2.5rem; }
+    
+    /* Mover el botón flotante un poco para que no estorbe en pantallas angostas */
+    .whatsapp-float {
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 55px !important;
+        height: 55px !important;
+        font-size: 30px !important;
+    }
 }
