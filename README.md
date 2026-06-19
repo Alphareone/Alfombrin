@@ -1,35 +1,128 @@
-# Masitas Jessy – Landing Page Comercial
+# 🧼 Alfombrin Landing Page
 
-## Descripción General
+## Descripción
 
-**Masitas Jessy** es una landing page comercial desarrollada para promocionar productos de repostería artesanal y facilitar la gestión de pedidos en línea mediante canales de contacto directo.
+**Alfombrin Landing Page** es una solución web desarrollada para promocionar servicios de limpieza y lavado profesional de alfombras en la Región de Valparaíso, ofreciendo una experiencia moderna, intuitiva y optimizada para la captación de clientes.
 
-El proyecto tiene su origen en **Alfombrin Landing Page**, una solución frontend interactiva inicialmente concebida para servicios de limpieza y lavado profesional. Tras un cambio en el modelo de negocio de la clienta, la plataforma fue rediseñada y adaptada exitosamente al sector de la repostería, conservando su estructura de conversión y optimizando la experiencia del usuario para la captación de pedidos.
+El proyecto fue diseñado bajo un enfoque de marketing digital y conversión comercial, facilitando el contacto directo mediante WhatsApp y presentando los servicios de manera clara y atractiva para potenciales clientes.
 
-## Objetivo
+---
 
-Diseñar una experiencia digital atractiva y funcional que permita:
+## Objetivo del Proyecto
 
-* Presentar la marca Masitas Jessy.
-* Exhibir productos de repostería artesanal.
-* Facilitar solicitudes de pedidos personalizados.
-* Mejorar la comunicación con potenciales clientes.
-* Incrementar la conversión de visitas en ventas.
+Crear una plataforma digital capaz de:
 
-## Alcance del Proyecto
+* Presentar los servicios de limpieza de forma profesional.
+* Generar confianza en potenciales clientes.
+* Facilitar solicitudes de cotización.
+* Incrementar las conversiones mediante canales de contacto directo.
+* Mejorar la presencia digital del negocio.
 
-La plataforma incorpora:
+---
 
-* Landing page responsive.
-* Catálogo visual de productos.
-* Integración con WhatsApp para pedidos.
-* Secciones promocionales.
-* Galería de productos.
-* Información de entregas y cobertura.
-* Diseño optimizado para dispositivos móviles.
+## Características Principales
 
-## Valor Agregado
+### Landing Page Comercial
 
-Uno de los aspectos más relevantes del proyecto fue la capacidad de reutilizar y adaptar una solución digital existente a un nuevo rubro comercial, demostrando flexibilidad en el diseño, optimización de recursos y orientación a las necesidades cambiantes del cliente.
+Diseño enfocado en la conversión de visitantes en clientes potenciales.
 
-Esta transformación permitió convertir una plataforma orientada a servicios de limpieza en una experiencia digital enfocada en la venta de productos de repostería artesanal, manteniendo buenas prácticas de diseño web, usabilidad y conversión comercial.
+### Diseño Responsive
+
+Compatible con computadores, tablets y dispositivos móviles.
+
+### Integración con WhatsApp
+
+Canal de comunicación rápido para consultas y reservas.
+
+### Sección de Servicios
+
+Presentación clara de los distintos tipos de limpieza ofrecidos.
+
+### Proceso de Trabajo
+
+Visualización simplificada de las etapas del servicio.
+
+### Promociones y Ofertas
+
+Espacios destinados a destacar descuentos y campañas comerciales.
+
+---
+
+## Tecnologías Utilizadas
+
+* HTML5
+* CSS3
+* JavaScript
+* Responsive Design
+* Flexbox
+* CSS Grid
+
+---
+
+## Público Objetivo
+
+* Hogares particulares.
+* Departamentos.
+* Oficinas.
+* Empresas.
+* Administradores de propiedades.
+* Clientes que requieren limpieza especializada de alfombras.
+
+---
+
+## Beneficios de la Solución
+
+* Mayor visibilidad digital.
+* Contacto directo con clientes.
+* Mejor presentación de servicios.
+* Disponibilidad de información las 24 horas.
+* Optimización del proceso de captación comercial.
+
+---
+
+## Arquitectura del Proyecto
+
+```text
+Alfombrin
+│
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── logos/
+└── README.md
+```
+
+---
+
+## Posibles Mejoras Futuras
+
+* Sistema de cotización automática.
+* Formulario avanzado de reservas.
+* Integración con Google Maps.
+* Panel de administración.
+* Sistema de seguimiento de solicitudes.
+* Reseñas verificadas de clientes.
+
+---
+
+## Caso de Uso
+
+Un cliente interesado en contratar un servicio de lavado de alfombras puede acceder al sitio web, revisar los servicios disponibles, conocer el proceso de trabajo y contactar directamente al negocio mediante WhatsApp para solicitar información o agendar una visita.
+
+---
+
+## Autor
+
+Proyecto desarrollado como solución frontend orientada a la digitalización de servicios locales y la optimización de procesos de captación comercial.
+
+---
+
+## Estado del Proyecto
+
+✅ Prototipo Funcional
+✅ Responsive Design
+✅ Integración WhatsApp
+🚀 En constante mejora
