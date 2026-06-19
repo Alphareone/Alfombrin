@@ -91,7 +91,7 @@ footer { background: var(--dark-green); color: white; text-align: center; paddin
 .reveal.active { opacity: 1; transform: translateY(0); }
 
 /* ==========================================================================
-   MÓVIL / RESPONSIVE OPTIMIZADO (EVITA COMPLETAMENTE SUPERPOSICIONES)
+   MÓVIL / RESPONSIVE COMPLETAMENTE ESTILIZADO Y EQUILIBRADO
    ========================================================================== */
 @media (max-width: 768px) {
     .nav-links, .nav-btn { 
@@ -100,14 +100,13 @@ footer { background: var(--dark-green); color: white; text-align: center; paddin
     
     .process-grid, .about-content { 
         grid-template-columns: 1fr !important; 
-        gap: 30px !important; 
+        gap: 40px !important; 
     }
 
-    /* Modificamos el Hero para que respire con scroll fluido */
     .hero {
         height: auto !important;
         min-height: 100vh !important;
-        padding: 130px 24px 60px !important; /* Espacio superior para esquivar el Navbar fijo */
+        padding: 140px 24px 60px !important; 
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -120,58 +119,63 @@ footer { background: var(--dark-green); color: white; text-align: center; paddin
         align-items: center !important;
         justify-content: center !important;
         width: 100% !important;
+        text-align: center !important;
     }
 
     .discount-badge {
-        font-size: 0.95rem !important;
-        padding: 8px 24px !important;
-        margin-bottom: 20px !important;
+        font-size: 0.85rem !important;
+        padding: 8px 20px !important;
+        margin-bottom: 25px !important;
     }
 
+    /* Título estilizado: fluido, centrado y sin cortes raros */
     .hero h1 { 
-        font-size: 2.2rem !important; /* Achicamos la tipografía para que no explote de lado a lado */
-        line-height: 1.25 !important;
-        margin-bottom: 15px !important;
+        font-size: 2.1rem !important; 
+        line-height: 1.3 !important;
+        margin-bottom: 20px !important;
+        max-width: 90% !important; /* Le da una bonita forma esférica al bloque de texto */
     }
 
+    /* Párrafo estilizado: no se pega a los bordes y se lee cómodo */
     .hero p {
-        font-size: 1rem !important;
-        margin-bottom: 30px !important;
-        line-height: 1.5 !important;
-        padding: 0 5px !important;
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 35px !important; 
+        padding: 0 15px !important;
+        max-width: 320px !important; /* Evita que las líneas se estiren demasiado */
+        opacity: 0.9 !important;
     }
 
-    /* Flujo vertical controlado para los dos botones */
+    /* Contenedor de botones idéntico en proporción al texto */
     .hero-btns {
         display: flex !important;
         flex-direction: column !important;
-        gap: 12px !important;
+        gap: 14px !important; 
         width: 100% !important;
         align-items: center !important;
     }
 
+    /* Botones estilizados: tamaño perfecto para el pulgar y bien proporcionados */
     .btn-secondary, .btn-cta {
         display: block !important;
         width: 100% !important;
-        max-width: 290px !important;
-        margin: 0 !important; /* Elimina márgenes laterales antiguos */
+        max-width: 250px !important; /* Un ancho más elegante, no tan estirado */
+        margin: 0 auto !important; 
         text-align: center !important;
-        padding: 15px 25px !important;
+        padding: 14px 25px !important;
         box-sizing: border-box !important;
-    }
-
-    /* Espaciados generales reducidos en móvil */
-    .features, .process-section, .about-section { 
-        padding: 60px 5% !important; 
-    }
-    .about-container {
-        padding: 35px 20px !important;
-    }
-    .section-header h2 {
-        font-size: 2rem !important;
+        font-size: 0.95rem !important;
     }
     
-    /* Mover el botón flotante un poco para que no estorbe en pantallas angostas */
+    .btn-secondary {
+        margin-right: auto !important; 
+    }
+
+    /* Ajustes del resto de la página */
+    .features, .process-section, .about-section { padding: 60px 5% !important; }
+    .about-container { padding: 35px 20px !important; }
+    .section-header h2 { font-size: 1.9rem !important; }
+    
     .whatsapp-float {
         bottom: 20px !important;
         right: 20px !important;
